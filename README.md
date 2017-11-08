@@ -1,4 +1,4 @@
 Cordova Plugin Template
 ======
 
-This is a simple starting point for building a Cordova plugin on iOS and Android.
+This is a simple plugin that fires a broadcast to native code.
