@@ -1,2 +1,4 @@
-# external-broadcaster
-Plugin that sends a broadcast to native code.
+Cordova Plugin Template
+======
+
+This is a simple starting point for building a Cordova plugin on iOS and Android.

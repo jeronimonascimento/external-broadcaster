@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    id="mv-jed-codbarrasexterno"
+    version="1.0.0">
+    <name>MV_JED_CodBarrasExterno</name>
+    <description>Pluguin criado por Jeronimo Nascimento na empresa MV Sistemas, para leitura de codigo de barras externo</description>
+    <license>MIT</license>
+    <keywords></keywords>
+    <repo>https://github.com/driftyco/cordova-plugin-template.git</repo>
+    <issue>https://github.com/driftyco/cordova-plugin-template/issues</issue>
+
+    <!-- android -->
+    <platform name="android">
+      <js-module src="www/plugin.js" name="plugin">
+        <runs/>
+
+        <!-- This is the window variable name you want, like window.MyCordovaPlugin -->
+        <clobbers target="cordova.plugins.MV_JED_CodBarrasExterno" />
+      </js-module>
+      <config-file target="res/xml/config.xml" parent="/*">
+        <feature name="MV_JED_CodBarrasExterno">
+          <param name="android-package" value="com.mv.MV_JED_CodBarrasExterno" />
+          <param name="onload" value="true" />
+        </feature>
+      </config-file>
+
+      <source-file src="src/android/com/mv/MV_JED_CodBarrasExterno.java" target-dir="src/com/mv/" />
+    </platform>
+
+    <!-- ios -->
+    <platform name="ios">
+        <js-module src="www/plugin.js" name="plugin">
+            <runs/>
+            <clobbers target="MV_JED_CodBarrasExterno" />
+        </js-module>
+        <config-file target="config.xml" parent="/*">
+            <feature name="MV_JED_CodBarrasExterno">
+                <param name="ios-package" value="MV_JED_CodBarrasExterno" onload="true" />
+            </feature>
+        </config-file>
+
+        <header-file src="src/ios/MyCordovaPlugin.h" />
+        <source-file src="src/ios/MyCordovaPlugin.m" />
+    </platform>
+</plugin>

@@ -1,0 +1,12 @@
+{
+  "name": "mv-jed-codbarrasexterno",
+  "version": "1.0.0",
+  "cordova": {
+    "id": "mv-jed-codbarrasexterno",
+    "platforms": [
+      "android",
+      "ios",
+    ]
+  },
+  "description": "Pluguin criado por Jeronimo Nascimento na empresa MV Sistemas, para leitura de codigo de barras externo"
+}
