@@ -40,9 +40,9 @@ public class ExternalBroadcaster extends CordovaPlugin {
   /**
   * Metodo utilizado para envio do evento nativo
   */
-   private void fireNativeEvent() {
+   private void fireNativeEvent(String action) {
 
-      Intent intent = new Intent("android.intent.action.BARCODE_NOTIFY");
+      Intent intent = new Intent(action);
   		intent.addFlags(Intent.FLAG_INCLUDE_STOPPED_PACKAGES);
 
       Bundle bundle = new Bundle();
@@ -61,18 +61,18 @@ public class ExternalBroadcaster extends CordovaPlugin {
   }
 
   /**
-  * Metodo executado ao chamar o pluguin pela ionic
+  * Metodo executado ao chamar o plugin pela ionic
   */
   public boolean execute(String action, JSONArray args, final CallbackContext callbackContext) throws JSONException {
 
-    if(action.equals("broadcast")) {
+    if(action != null) {
 
       try {
   			cordova.getThreadPool().execute(new Runnable() {
 
             @Override
             public void run() {
-               fireNativeEvent();
+               fireNativeEvent(action);
             }
 
         });

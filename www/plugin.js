@@ -5,8 +5,8 @@ var PLUGIN_NAME = 'ExternalBroadcaster';
 
 var _ExternalBroadcaster = {
 
-  broadcast: function(cb){
-	exec(cb, null, PLUGIN_NAME, 'broadcast', []);
+  broadcast: function(cb, intentName){
+	exec(cb, null, PLUGIN_NAME, intentName, []);
   }
 
 };
